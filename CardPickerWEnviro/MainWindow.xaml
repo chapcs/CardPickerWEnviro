@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CardPickerWEnviro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CARD PICKER" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <Label Content="How many cards should I pick?" FontSize="20"/>
+            <Slider Minimum="1" Maximum="15" Foreground="Black" IsSnapToTickEnabled="True" TickPlacement="BottomRight"/>
+        </StackPanel>
         
+
     </Grid>
 </Window>
