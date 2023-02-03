@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CardPickerWEnviro"
         mc:Ignorable="d"
-        Title="CARD PICKER" Height="450" Width="800">
+        Title="CARD PICKER" Height="300" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -17,9 +17,11 @@
         </Grid.RowDefinitions>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
             <Label Content="How many cards should I pick?" FontSize="20"/>
-            <Slider Minimum="1" Maximum="15" Foreground="Black" IsSnapToTickEnabled="True" TickPlacement="BottomRight"/>
+            <Slider x:Name="numberOfCards" Minimum="1" Maximum="15" Foreground="Black" IsSnapToTickEnabled="True" TickPlacement="BottomRight" AutoToolTipPlacement="TopLeft"/>
         </StackPanel>
-        
+        <Button Content="Pick some cards" FontSize="20" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Click="Button_Click"/>
+        <ListBox x:Name="listOfCards" FontSize="20" Margin="20" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2"/>
+
 
     </Grid>
 </Window>
